@@ -15,9 +15,10 @@
       <th>本文</th>
     </tr>
     @foreach($posts as $post)
-     <tr>
+    <tr>
       <td>{{ $post->title }}</td>
       <td>{{ $post->content }}</td>
+    </tr>
     @endforeach
   </table>
 </body>
