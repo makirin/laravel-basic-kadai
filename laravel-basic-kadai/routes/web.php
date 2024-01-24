@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // ルーティングを設定するコントローラを宣言する
 use App\Http\Controllers\postController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +15,15 @@ use App\Http\Controllers\postController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', function () {
+  return view('welcome');
+});
 
 Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/create', [PostController::class, 'create']);
 
+Route::post('/posts/add', [PostController::class, 'add'])->name('posts.add');
+ 
 Route::get('/posts/{id}', [PostController::class, 'show']);
+
+
