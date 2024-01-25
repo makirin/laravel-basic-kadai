@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Post;
-use App\Http\Requests\PostCreateRequest;
+use App\Http\Requests\PostStoreRequest;
 
 class postController extends Controller {
     public function index() {
@@ -30,7 +30,7 @@ class postController extends Controller {
         return view('posts.create');
       }
 
-      public function add(PostCreateRequest $request) {
+      public function store(PostStoreRequest $request) {
 
         // フォームの入力内容をもとに、テーブルにデータを追加する
         $post = new Post();
