@@ -19,7 +19,7 @@
     </div>
   @endif 
   
-  <form action="{{ route('posts.add') }}" method="POST">
+  <form action="{{ route('posts.store') }}" method="POST">
     @csrf
     <table>
       <tr>
