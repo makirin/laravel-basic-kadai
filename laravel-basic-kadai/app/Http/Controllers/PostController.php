@@ -30,7 +30,11 @@ class postController extends Controller {
         return view('posts.create');
       }
 
-      public function store(PostStoreRequest $request) {
+      public function store(Request $request) {
+        $request->validate([
+          'title' => 'required|max:20',
+          'content' => 'required|max:200'
+        ]);
 
         // フォームの入力内容をもとに、テーブルにデータを追加する
         $post = new Post();
