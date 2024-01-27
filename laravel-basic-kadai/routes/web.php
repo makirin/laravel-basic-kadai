@@ -16,9 +16,6 @@ use App\Http\Controllers\postController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-  return view('welcome');
-});
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,18 +35,8 @@ require __DIR__.'/auth.php';
 
 Route::get('/posts', [PostController::class, 'index']);
 
-<<<<<<< HEAD
 Route::get('/posts/create', [PostController::class, 'create'])->middleware('auth');
 
 Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store')->middleware('auth');
  
 Route::get('/posts/{id}', [PostController::class, 'show']);
-=======
-Route::get('/posts/create', [PostController::class, 'create']);
-
-Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store');
- 
-Route::get('/posts/{id}', [PostController::class, 'show']);
-
-
->>>>>>> 0a9cbf7a2271da746b6ed9335662e8821902bf68
