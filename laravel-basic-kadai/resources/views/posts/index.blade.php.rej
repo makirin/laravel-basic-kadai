@@ -1,0 +1,6 @@
+diff a/laravel-basic-kadai/resources/views/posts/index.blade.php b/laravel-basic-kadai/resources/views/posts/index.blade.php	(rejected hunks)
+@@ -2,3 +3,4 @@
++<<<<<<< HEAD
+ <!DOCTYPE html>
+ <html lang="ja">
+  
