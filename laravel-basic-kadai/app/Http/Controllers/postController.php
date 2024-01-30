@@ -45,4 +45,5 @@ class postController extends Controller {
         // リダイレクトさせる
         return redirect("/posts");
       }
+      // Gitテスト
 }
